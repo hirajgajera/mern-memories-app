@@ -1,6 +1,6 @@
 import {FETCH_ALL, CREATE, UPDATE, DELETE} from '../constants/actionType.js'
 
-export default (posts = [], action) => {
+const fn = (posts = [], action) => {
     switch(action.type){
         case FETCH_ALL: 
             return action.payload;
@@ -18,3 +18,5 @@ export default (posts = [], action) => {
             return posts;
     }
 }
+
+export default fn;
